@@ -19,4 +19,9 @@ KivyMD's uix library was used heavily for its UI elements along with several oth
 
  ## Instructions for running
 -**Download**: dependencies for python, kivy, kivyMD
--**Navigate**: to the Project_Code
+
+-**Clone**: the repo into your desired directory
+
+-**Navigate**: to the Project_Code folder (you should see main.py)
+
+-**Run**: in Terminal using "python main.py"
