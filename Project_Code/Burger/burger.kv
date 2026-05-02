@@ -1,0 +1,26 @@
+<BurgerNav>:
+    BoxLayout:
+
+        Button:
+            text: "☰"
+            on_release: app.open_nav(self)
+
+        Button:
+            text: "Home"
+            on_release: app.switch_to("home")
+
+        Button:
+            text: "Profile"
+            on_release: app.switch_to("profile")
+
+        Button:
+            text: "Tracking"
+            on_release: app.switch_to("tracking") 
+
+        Button:
+            text: "Resources"
+            on_release: app.switch_to("resources")
+
+        Button:
+            text: "Settings"
+            on_release: app.switch_to("settings")
