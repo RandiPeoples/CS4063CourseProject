@@ -1,0 +1,70 @@
+<SymptomQForm>:
+    name: "symptom_q_form"
+    md_bg_color: app.theme_cls.backgroundColor
+
+    MDBoxLayout:
+        orientation: "vertical"
+        spacing: dp(20)
+        padding: dp(20)
+
+        MDLabel:
+            text: "Add Symptoms"
+            halign: "center"
+
+        MDTextField:
+            id: symptom_input
+            mode: "outlined"
+
+            MDTextFieldHintText:
+                text: "Symptom Type:"
+
+            MDTextFieldHelperText:
+                text: "ex: headache, joint pain"
+                mode: "persistent"
+
+            MDTextFieldMaxLengthText:
+                max_text_length: 50
+
+        MDTextField:
+            id: symptom_input
+            mode: "outlined"
+
+            MDTextFieldHintText:
+                text: "Pain Area Dropdown Coming Soon"
+
+            MDTextFieldHelperText:
+                text: "Left knee, right inner shoulder blade"
+                mode: "persistent"
+
+            MDTextFieldMaxLengthText:
+                max_text_length: 50
+
+        MDTextField:
+            mode: "outlined"
+
+            MDTextFieldHintText:
+                text: "Start time:"
+            
+            MDTextFieldHelperText:
+                text: "Did it start within the past hour, or day?"
+                mode: "persistent"
+
+            MDTextFieldMaxLengthText:
+                max_text_length: 50
+
+        Widget:
+
+        MDButton:
+            pos_hint: {"center_x": 0.65, "bottom": 1}
+            on_release: app.submit_form()
+
+            MDButtonText:
+                text: "Submit Symptom Entry"
+
+        MDButton:
+            pos_hint: {"center_x": 0.35, "bottom": 1}
+            on_release: app.change_screen("tracking")
+
+            MDButtonText:
+                text: "Add more details"
+                

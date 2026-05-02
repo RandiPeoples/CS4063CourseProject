@@ -1,0 +1,51 @@
+#:import HomeScreen main.HomeScreen
+#:import ProfileScreen main.ProfileScreen
+#:import TrackingScreen main.TrackingScreen
+#:import SymptomQForm main.SymptomQForm
+
+MDBoxLayout:
+    orientation: "vertical"
+    
+    MDTopAppBar:
+        id: nav_bar
+        type: "small"
+
+        MDTopAppBarLeadingButtonContainer:
+
+            MDActionTopAppBarButton:
+                id: nav_button
+                icon: "dots-vertical"
+                on_release: app.open_nav(self)
+
+        MDTopAppBarTitle:
+            text: "H^3 Helper"
+            halign: "center"
+
+    
+    MDScreenManager:
+        id: sm
+
+        HomeScreen:
+            name: "home"
+
+        ProfileScreen:
+            name: "profile"
+
+        TrackingScreen:
+            name: "tracking"
+
+        SymptomQForm:
+            name: "symptomQForm"
+
+    MDFloatLayout:
+        size_hint_y: None
+
+        MDButton:
+            id: bubble
+            pos_hint: {"center_x": .9, "center_y": .5}
+            on_release: app.open_bubble(self)
+
+            MDButtonIcon:
+                icon: "plus" 
+
+        
