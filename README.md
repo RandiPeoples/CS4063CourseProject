@@ -1,6 +1,6 @@
 # CS4063CourseProject
 
-H<sup>3</sup> Medical Tracking
+Hyperflex Helper Medical Tracking
 
 The source code for a project app that proposes to track the medical experience of those with connective tissue disorders.
 
@@ -9,7 +9,7 @@ The source code for a project app that proposes to track the medical experience 
 
 -**Bubble Quick Add Menu**: Allows users to quickly document a symptom, time they took a medication, or add a new doctor to their roster.
 
--**Provides a Custom One-Stop-Shop**: Users can customize their profile to their own needs and find resources, track their symptoms, more.
+-**Provides a Custom One-Stop-Shop**: Users can customize their profile to their own needs and find resources, track their symptoms, and more.
 
  ## Major Components
 -**KivyMD 2.0 was chosen for the design language, supported by python. A structure of separating each file into two parts, a .py and a .kv file, was adopted for consistency as some files became too complex to be covered in one file. The persistent menus are controlled in the main files that behave as the root. 
