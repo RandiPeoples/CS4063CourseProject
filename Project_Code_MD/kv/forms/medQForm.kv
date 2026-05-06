@@ -1,73 +1,66 @@
-<SymptomQForm>:
-    name: "symptom_q_form"
+<MedQForm>:
+    name: "med_q_form"
     md_bg_color: app.theme_cls.primaryFixedColor
+
 
     MDBoxLayout:
         orientation: "vertical"
         spacing: dp(20)
         padding: dp(20)
-        halign: "center"
 
         MDLabel:
-            text: "Add Symptoms"
+            text: "Add New Medication"
+            halign: "center"
 
         MDTextField:
             id: symptom_input
             mode: "outlined"
 
             MDTextFieldHintText:
-                text: "Symptom Type:"
+                text: "Medication Name Here"
 
             MDTextFieldHelperText:
-                text: "ex: headache, joint pain"
-                mode: "persistent"
-
-            MDTextFieldMaxLengthText:
-                max_text_length: 50
-
-        MDBoxLayout:
-            MDLabel:   
-                text: "Symptom intensity, 0 - 10"
-
-            MDIconButton:
-                icon: "minus"
-                on_release: root.change_value(-1)
-
-            MDTextField:
-                id: number_field
-                text: "5"
-                input_filter: "int"
-                size_hint_x: None
-                width: "80dp"
-                halign: "center"
-
-            MDIconButton:
-                icon: "plus"
-                on_release: app.root.ids.sm.change_value(1)
-
-        MDTextField:
-            id: symptom_lvl
-            mode: "outlined"
-
-            MDTextFieldHintText:
-                text: "ex: 3 out of 10 with spikes reaching 6"
-
-            MDTextFieldHelperText:
-                text: "Left knee, right inner shoulder blade"
+                text: "ex: Cyclobenzaprine"
                 mode: "persistent"
 
             MDTextFieldMaxLengthText:
                 max_text_length: 50
 
         MDTextField:
-            id: symptom_area
+            id: symptom_input
             mode: "outlined"
 
             MDTextFieldHintText:
-                text: "Start time:"
+                text: "Dosage"
+
+            MDTextFieldHelperText:
+                text: "ex: 25mg nightly"
+                mode: "persistent"
+
+            MDTextFieldMaxLengthText:
+                max_text_length: 50
+
+        MDTextField:
+            mode: "outlined"
+
+            MDTextFieldHintText:
+                text: "Begin Date:"
             
             MDTextFieldHelperText:
-                text: "Did it start within the past hour, or day?"
+                text: "ex: May 23, 2026"
+                mode: "persistent"
+
+            MDTextFieldMaxLengthText:
+                max_text_length: 50
+
+        MDTextField:
+            mode: "outlined"
+
+            MDTextFieldHintText:
+                text: "Notes:"
+            
+            MDTextFieldHelperText:
+                text: "ex: take with food"
                 mode: "persistent"
 
             MDTextFieldMaxLengthText:
@@ -76,7 +69,6 @@
         MDGridLayout:
             cols:  2
             spacing: "6dp"
-            halign: "center"
 
             MDButton:
                 pos_hint: {"center_x": 0.65, "bottom": 1}

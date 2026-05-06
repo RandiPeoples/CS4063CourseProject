@@ -1,14 +1,107 @@
 <HomeScreen>:
+    md_bg_color: app.theme_cls.primaryFixedColor
 
     MDBoxLayout:
         orientation: "vertical"
 
         MDLabel:
-            text: "HOME SCREEN WORKS"
+            text: "Welcome Home, User42"
             halign: "center"
 
-        MDButton:
-            pos_hint: {"center_x": 0.5}
+        MDLabel:
+            text: "Your present circumstances don't determine where you can go, they merely determine where you start. -Nido Qubein"
+            halign: "center"
 
-            MDButtonText:
-                text: "Test Button"
+        MDGridLayout:
+            cols: 2
+            spacing: "6dp"
+            padding: "6dp"
+            pos_hint: {"center_x": 0.5}
+            adaptive_size: True
+        
+            MDCard:
+                style: "elevated"
+                padding: "4dp"
+                size_hint: None, None
+                size: "240dp", "100dp"
+                #Sets custom properties
+
+                #This keeps the text and vertical dots in place
+                RelativeLayout:
+                    MDIconButton:
+                        icon: "dots-vertical"
+                        pos_hint: {"top": 1, "right": 1}
+
+                    MDLabel:
+                        text: "Exercise Routine"
+                        adaptive_size: True
+
+            MDCard:
+                style: "elevated"
+                padding: "4dp"
+                size_hint: None, None
+                size: "240dp", "100dp"
+                #Sets custom properties
+
+                #This keeps the text and vertical dots in place
+                RelativeLayout:
+                    MDIconButton:
+                        icon: "dots-vertical"
+                        pos_hint: {"top": 1, "right": 1}
+
+                    MDLabel:
+                        text: "Notes"
+                        adaptive_size: True
+
+            MDCard:
+                style: "elevated"
+                padding: "4dp"
+                size_hint: None, None
+                size: "240dp", "100dp"
+                #Sets custom properties
+
+                #This keeps the text and vertical dots in place
+                RelativeLayout:
+                    MDIconButton:
+                        icon: "dots-vertical"
+                        pos_hint: {"top": 1, "right": 1}
+
+                    MDLabel:
+                        text: "Upcoming Appointments"
+                        adaptive_size: True
+            MDCard:
+                style: "elevated"
+                padding: "4dp"
+                size_hint: None, None
+                size: "240dp", "100dp"
+                #Sets custom properties
+
+                #This keeps the text and vertical dots in place
+                RelativeLayout:
+                    MDIconButton:
+                        icon: "dots-vertical"
+                        pos_hint: {"top": 1, "right": 1}
+
+                    MDLabel:
+                        text: "Reminders"
+                        adaptive_size: True
+
+            MDCard:
+                style: "elevated"
+                padding: "4dp"
+                size_hint: None, None
+                size: "240dp", "100dp"
+                #Sets custom properties
+
+                #This keeps the text and vertical dots in place
+                RelativeLayout:
+                    MDIconButton:
+                        icon: "dots-vertical"
+                        pos_hint: {"top": 1, "right": 1}
+
+                    MDIconButton:
+                        icon: "plus"
+                        adaptive_size: True
+
+            
+                

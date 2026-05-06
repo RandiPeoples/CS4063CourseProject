@@ -1,11 +1,8 @@
 from kivymd.uix.screen import MDScreen
+from kivymd.app import MDApp
+from kivy.lang import Builder
 from kivymd.uix.label import MDLabel
-
+from kivymd.icon_definitions import md_icons
 
 class SettingsScreen(MDScreen):
-    
-    def on_enter(self):
-        
-        if not self.children:
-            
-            self.add_widget(MDLabel(text="Settings LOADED", halign="center"))
+    pass

@@ -5,6 +5,7 @@ from kivymd.uix.screen import MDScreen
 from kivymd.uix.menu import MDDropdownMenu
 from kivymd.uix.snackbar import MDSnackbar, MDSnackbarText
 from kivy.metrics import dp
+from components.track_pain_slide import init_db
 
 class HomeScreen(MDScreen):
     pass
@@ -15,7 +16,19 @@ class ProfileScreen(MDScreen):
 class TrackingScreen(MDScreen):
     pass
 
+class ResourcesScreen(MDScreen):
+    pass
+
+class SettingsScreen(MDScreen):
+    pass
+
 class SymptomQForm(MDScreen):
+    pass
+
+class DrQForm(MDScreen):
+    pass
+
+class MedQForm(MDScreen):
     pass
 
 class MainApp(MDApp):
@@ -26,8 +39,11 @@ class MainApp(MDApp):
         Builder.load_file("kv/screens/home.kv")
         Builder.load_file("kv/screens/profile.kv")
         Builder.load_file("kv/screens/tracking.kv")
-
+        Builder.load_file("kv/screens/resources.kv")
+        Builder.load_file("kv/screens/settings.kv")
         Builder.load_file("kv/forms/symptomQForm.kv")
+        Builder.load_file("kv/forms/drQForm.kv")
+        Builder.load_file("kv/forms/medQForm.kv")
 
         self.root = Builder.load_file("main.kv")
 
@@ -67,15 +83,18 @@ class MainApp(MDApp):
             { 
                 "leading_icon": "stethoscope", 
                 "text": "Add Doctor", 
-                "on_release": lambda: self.bubble_callback("Add Doctor") 
+                "on_release": lambda: self.bubble_callback("drQForm") 
             }, 
             {
                 "leading_icon": "medication", 
                 "text": "Track Medication", 
-                "on_release": lambda: self.bubble_callback("Track Medication") 
+                "on_release": lambda: self.bubble_callback("medQForm") 
             }
         ]
         self.bubble_menu = MDDropdownMenu(items = menu_items, width = dp(220))
+
+        #initialize track_pain_slide's database functions to use user data
+        init_db()
 
         return self.root
 
@@ -133,6 +152,12 @@ class MainApp(MDApp):
     def open_symptom_form(self, form_name):
         self.bubble_menu.dismiss()
         self.change_screen("symptomQForm")
+
+    #Controls URL links in resources screen
+    def open_link(self):
+        import webbrowser
+        webbrowser.open("https://www.ehlers-danlos.com/what-is-eds/")
+        webbrowser.open("http://www.triggerpoints.net/")
 
 if __name__ == "__main__":
     MainApp().run()

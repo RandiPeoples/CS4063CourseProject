@@ -1,10 +1,14 @@
 #:import HomeScreen main.HomeScreen
 #:import ProfileScreen main.ProfileScreen
 #:import TrackingScreen main.TrackingScreen
+#:import ResourcesScreen main.ResourcesScreen
+#:import SettingsScreen main.SettingsScreen
 #:import SymptomQForm main.SymptomQForm
+#:import MedQForm main.MedQForm
 
 MDBoxLayout:
     orientation: "vertical"
+    md_bg_color: app.theme_cls.primaryColor
     
     MDTopAppBar:
         id: nav_bar
@@ -18,9 +22,8 @@ MDBoxLayout:
                 on_release: app.open_nav(self)
 
         MDTopAppBarTitle:
-            text: "H^3 Helper"
+            text: "Hyperflex Helper   "
             halign: "center"
-
     
     MDScreenManager:
         id: sm
@@ -34,8 +37,20 @@ MDBoxLayout:
         TrackingScreen:
             name: "tracking"
 
+        ResourcesScreen:
+            name: "resources"
+
+        SettingsScreen:
+            name: "settings"
+
         SymptomQForm:
             name: "symptomQForm"
+
+        DrQForm:
+            name: "drQForm"
+
+        MedQForm:
+            name: "medQForm"
 
     MDFloatLayout:
         size_hint_y: None

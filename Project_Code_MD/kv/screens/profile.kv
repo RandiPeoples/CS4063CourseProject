@@ -1,14 +1,141 @@
 <ProfileScreen>:
+    md_bg_color: app.theme_cls.primaryFixedColor
 
     MDBoxLayout:
         orientation: "vertical"
+        padding: "2dp"
+        spacing: "6dp"
 
         MDLabel:
-            text: "Profile SCREEN WORKS"
+            text: "User42's Profile"
             halign: "center"
 
-        MDButton:
+        MDGridLayout:
+            cols: 2
+            size_hint_y: None
+            height: self.minimum_height
+            spacing: "6dp"
+            padding: "2dp"
             pos_hint: {"center_x": 0.5}
+            adaptive_size: True
 
-            MDButtonText:
-                text: "Profile Button"
+            MDCard:
+                style: "elevated"
+                padding: "4dp"
+                size_hint: None, None
+                size: "240dp", "100dp"
+                #Sets custom properties
+
+                #This keeps the text and vertical dots in place
+                RelativeLayout:
+                    MDIconButton:
+                        icon: "dots-vertical"
+                        pos_hint: {"top": 1, "right": 1}
+
+                    MDLabel:
+                        text: "Emergency Information"
+                        adaptive_size: True
+            
+            MDCard:
+                style: "elevated"
+                padding: "4dp"
+                size_hint: None, None
+                size: "240dp", "100dp"
+                #Sets custom properties
+
+                #This keeps the text and vertical dots in place
+                RelativeLayout:
+                    MDIconButton:
+                        icon: "dots-vertical"
+                        pos_hint: {"top": 1, "right": 1}
+
+                    MDLabel:
+                        text: "Providers"
+                        adaptive_size: True
+            
+            MDCard:
+                style: "elevated"
+                padding: "4dp"
+                size_hint: None, None
+                size: "240dp", "100dp"
+                #Sets custom properties
+
+                #This keeps the text and vertical dots in place
+                RelativeLayout:
+                    MDIconButton:
+                        icon: "dots-vertical"
+                        pos_hint: {"top": 1, "right": 1}
+
+                    MDLabel:
+                        text: "Test Results"
+                        adaptive_size: True
+                    
+            MDCard:
+                style: "elevated"
+                padding: "4dp"
+                size_hint: None, None
+                size: "240dp", "100dp"
+                #Sets custom properties
+
+                #This keeps the text and vertical dots in place
+                RelativeLayout:
+                    MDIconButton:
+                        icon: "dots-vertical"
+                        pos_hint: {"top": 1, "right": 1}
+
+                    MDLabel:
+                        text: "Therapies"
+                        adaptive_size: True
+
+            MDCard:
+                style: "elevated"
+                padding: "4dp"
+                size_hint: None, None
+                size: "240dp", "100dp"
+                #Sets custom properties
+
+                #This keeps the text and vertical dots in place
+                RelativeLayout:
+                    MDIconButton:
+                        icon: "dots-vertical"
+                        pos_hint: {"top": 1, "right": 1}
+
+                    MDLabel:
+                        text: "Medications"
+                        adaptive_size: True
+
+            MDCard:
+                style: "elevated"
+                padding: "4dp"
+                size_hint: None, None
+                size: "240dp", "100dp"
+                #Sets custom properties
+
+                #This keeps the text and vertical dots in place
+                RelativeLayout:
+                    MDIconButton:
+                        icon: "dots-vertical"
+                        pos_hint: {"top": 1, "right": 1}
+
+                    MDLabel:
+                        text: "Procedures"
+                        adaptive_size: True
+
+            MDCard:
+                style: "elevated"
+                padding: "4dp"
+                size_hint: None, None
+                size: "240dp", "100dp"
+                #Sets custom properties
+
+                #This keeps the text and vertical dots in place
+                RelativeLayout:
+                    MDIconButton:
+                        icon: "dots-vertical"
+                        pos_hint: {"top": 1, "right": 1}
+
+                    MDIconButton:
+                        icon: "plus"
+                        adaptive_size: True
+
+            

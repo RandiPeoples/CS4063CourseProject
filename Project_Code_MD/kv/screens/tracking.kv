@@ -1,14 +1,36 @@
 <TrackingScreen>:
+    md_bg_color: app.theme_cls.primaryFixedColor
 
     MDBoxLayout:
         orientation: "vertical"
 
         MDLabel:
-            text: "Tracking SCREEN WORKS"
+            text: "Tracking"
             halign: "center"
 
-        MDButton:
-            pos_hint: {"center_x": 0.5}
+        MDBoxLayout:
+            md_bg_color: app.theme_cls.primaryContainerColor
 
-            MDButtonText:
-                text: "Test Tracking Button"
+            id: symptom_chart
+            height: "150dp"
+            padding: "10dp"
+
+            MDBoxLayout:
+                orientation: "horizontal"
+
+                MDButton:
+
+                    MDButtonText:
+                        text: "Graph"
+
+                MDButton:
+
+                    MDButtonText:
+                        text: "Export"
+
+        Image:
+            source: "placeholder_graph.png"
+            allow_stretch: True
+            keep_ratio: True
+
+        

@@ -1,0 +1,35 @@
+<ResourcesScreen>:
+    md_bg_color: app.theme_cls.primaryFixedColor
+
+    MDBoxLayout:
+        orientation: "vertical"
+        spacing: "6dp"
+        padding: "6dp"
+
+        MDLabel:
+            text: "Resources"
+            halign: "center"
+        
+        MDButton:
+            pos_hint: {"center_x": 0.5}
+            on_release: app.open_link()
+
+            MDButtonText:
+                text: "Ehlers-Danlos Society Website"
+
+        MDButton:
+            pos_hint: {"center_x": 0.5}
+            on_release: app.open_link()
+
+            MDButtonText:
+                text: "Trigger Points Interactive Website"
+
+        Widget:
+
+        MDButton:
+            pos_hint: {"center_x": 0.5}
+
+            MDButtonText:
+                text: "Search Button"
+
+        
